@@ -1,2 +1,1 @@
-# mkdnsbind
-Make DNS Server with Bind
+# Make DNS Server with Bind
