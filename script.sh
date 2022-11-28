@@ -5,7 +5,7 @@ domain="example.com.br"
 hostname=$(hostname)
 hostnameips=$(hostname -I)
 hostnamefisrtipv4=$(hostname -I | cut -d" " -f1)
-reversehostnamefisrtipv4=$(echo $hostnamefisrtipv4 | cut -d"." -f4).$(echo $hostnamefisrtipv4 | cut -d"." -f3).$(echo $hostnamefisrtipv4 | cut -d"." -f2).$(echo $hostnamefisrtipv4 | cut -d"." -f1)
+reversehostnamefisrtipv4=$(echo $hostnamefisrtipv4 | cut -d"." -f3).$(echo $hostnamefisrtipv4 | cut -d"." -f2).$(echo $hostnamefisrtipv4 | cut -d"." -f1)
 endhostnamefisrtipv4=$(echo $hostnamefisrtipv4 | cut -d"." -f4)
 serialdate=$(date +'%Y%m%d')
 
