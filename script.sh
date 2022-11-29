@@ -15,7 +15,7 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 echo "Install BIND"
 apt update
-apt install -y bind9 bind9utils bind9-doc
+apt install -y bind9 bind9utils bind9-doc dnsutils
 
 echo "Establishing Localhost DNS"
 cp /etc/resolv.conf /etc/resolv.conf.bkp_$(date --iso-8601='s')
