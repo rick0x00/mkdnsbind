@@ -156,6 +156,10 @@ if [ $dnstype = "master" ]; then
 	zone '"$reversehostnamefisrtipv4.in-addr.arpa"' {
 		type master;
 		file "'"/var/lib/bind/$domain/db/db.$reversehostnamefisrtipv4"'";
+		key-directory "'"/var/lib/bind/$domain/keys/"'";
+		auto-dnssec maintain;
+		inline-signing yes;
+		serial-update-method increment;
 	};
 	// --- BEGIN ORGANIZATION ZONES ---
 	' > /etc/bind/named.conf.local
