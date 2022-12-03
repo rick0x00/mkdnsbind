@@ -46,7 +46,7 @@ echo ';
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA'"	ns1.$domain. root.$domain. "'(
+@	IN	SOA'"	dns.$domain. root.$domain. "'(
 			'"$serialdate"'		; Serial
 			604800		; Refresh
 			86400		; Retry
@@ -55,6 +55,9 @@ $TTL	604800
 ;'"
 			IN	NS	ns1.$domain.
 			IN	NS	ns2.$domain.
+
+dns			IN	A	$masterdnsipv4
+dns			IN	A	$slavednsipv4	
 
 ns1			IN	A	$masterdnsipv4
 ns2			IN	A	$slavednsipv4	
@@ -67,7 +70,7 @@ echo ';
 ; BIND reverse data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA'"	ns1.$domain. root.$domain. "'(
+@	IN	SOA'"	dns.$domain. root.$domain. "'(
 			'"$serialdate"'		; Serial
 			604800		; Refresh
 			86400		; Retry
